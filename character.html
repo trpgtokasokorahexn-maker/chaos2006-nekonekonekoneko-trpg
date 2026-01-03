@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>キャラクター詳細 - クトゥルフ神話TRPG 7版</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="site-title">
+                <i class="fas fa-user"></i>
+                キャラクター詳細
+            </h1>
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> トップページに戻る
+            </a>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="#abilities" onclick="showSection('abilities')">能力値</a></li>
+                <li><a href="#derived" onclick="showSection('derived')">派生値</a></li>
+                <li><a href="#skills-limit" onclick="showSection('skills-limit')">技能上限</a></li>
+                <li><a href="#occupations" onclick="showSection('occupations')">職業</a></li>
+                <li><a href="#credit" onclick="showSection('credit')">信用</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main">
+        <div class="container">
+            <section id="abilities" class="content-section">
+                <h2>能力値の詳細</h2>
+                
+                <div class="rule-card">
+                    <h3><i class="fas fa-dumbbell"></i> STR（筋力）</h3>
+                    <p>物理的な力、筋力、持久力を表す能力値です。</p>
+                    <div class="ability-details">
+                        <h4>主な影響</h4>
+                        <ul>
+                            <li>近接戦闘のダメージ修正</li>
+                            <li>投擲武器の射程距離</li>
+                            <li>筋力系技能（キック、グラップルなど）</li>
+                            <li>ビルド（体格）の計算</li>
+                        </ul>
+                        <h4>参考値</h4>
+                        <div class="stats-range">
+                            <span class="range-low">3-8: 虚弱</span>
+                            <span class="range-normal">9-12: 平均</span>
+                            <span class="range-high">13-18: 強健</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-heart"></i> CON（体力）</h3>
+                    <p>健康、耐久力、生命力を表す能力値です。</p>
+                    <div class="ability-details">
+                        <h4>主な影響</h4>
+                        <ul>
+                            <li>ヒットポイントの計算</li>
+                            <li>毒や病気への抵抗力</li>
+                            <li>疲労に対する耐性</li>
+                            <li>ノックアウト時のCONロール</li>
+                        </ul>
+                        <h4>参考値</h4>
+                        <div class="stats-range">
+                            <span class="range-low">3-8: 病弱</span>
+                            <span class="range-normal">9-12: 健康</span>
+                            <span class="range-high">13-18: 頑健</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-running"></i> DEX（敏捷）</h3>
+                    <p>反射神経、器用さ、素早さを表す能力値です。</p>
+                    <div class="ability-details">
+                        <h4>主な影響</h4>
+                        <ul>
+                            <li>戦闘での行動順</li>
+                            <li>回避ロール</li>
+                            <li>器用さを要する技能</li>
+                            <li>ムーブ（移動力）の計算</li>
+                        </ul>
+                        <h4>参考値</h4>
+                        <div class="stats-range">
+                            <span class="range-low">3-8: 不器用</span>
+                            <span class="range-normal">9-12: 普通</span>
+                            <span class="range-high">13-18: 敏捷</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-brain"></i> INT（知性）</h3>
+                    <p>知力、理解力、論理的思考能力を表す能力値です。</p>
+                    <div class="ability-details">
+                        <h4>主な影響</h4>
+                        <ul>
+                            <li>知識系技能の基本値</li>
+                            <li>興味本位技能ポイント（INT×10）</li>
+                            <li>言語技能の数</li>
+                            <li>謎解きや推理能力</li>
+                        </ul>
+                        <h4>参考値</h4>
+                        <div class="stats-range">
+                            <span class="range-low">3-8: 愚鈍</span>
+                            <span class="range-normal">9-12: 平均</span>
+                            <span class="range-high">13-18: 聡明</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-eye"></i> POW（精神力）</h3>
+                    <p>意志力、精神の強さ、魔力を表す能力値です。</p>
+                    <div class="ability-details">
+                        <h4>主な影響</h4>
+                        <ul>
+                            <li>正気度（SAN）の基本値</li>
+                            <li>幸運の基本値</li>
+                            <li>マジックポイント</li>
+                            <li>精神系技能</li>
+                        </ul>
+                        <h4>参考値</h4>
+                        <div class="stats-range">
+                            <span class="range-low">3-8: 意志薄弱</span>
+                            <span class="range-normal">9-12: 普通</span>
+                            <span class="range-high">13-18: 意志堅固</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-smile"></i> APP（外見）</h3>
+                    <p>魅力、容姿、印象を与える力を表す能力値です。</p>
+                    <div class="ability-details">
+                        <h4>主な影響</h4>
+                        <ul>
+                            <li>交渉系技能</li>
+                            <li>第一印象への影響</li>
+                            <li>人望や人気度</li>
+                            <li>リーダーシップ能力</li>
+                        </ul>
+                        <h4>参考値</h4>
+                        <div class="stats-range">
+                            <span class="range-low">3-8: 不魅力</span>
+                            <span class="range-normal">9-12: 普通</span>
+                            <span class="range-high">13-18: 魅力的</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-ruler"></i> SIZ（サイズ）</h3>
+                    <p>体の大きさ、身長と体重の総合的な指標です。</p>
+                    <div class="ability-details">
+                        <h4>主な影響</h4>
+                        <ul>
+                            <li>ヒットポイントの計算</li>
+                            <li>隠密や忍び歩きの難易度</li>
+                            <li>ビルド（体格）の計算</li>
+                            <li>移動可能な場所の制限</li>
+                        </ul>
+                        <h4>参考値</h4>
+                        <div class="stats-range">
+                            <span class="range-low">3-8: 小柄</span>
+                            <span class="range-normal">9-12: 平均的</span>
+                            <span class="range-high">13-18: 大柄</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-graduation-cap"></i> EDU（教育）</h3>
+                    <p>正規の教育を受けた年数、知識と教養のレベルを表します。</p>
+                    <div class="ability-details">
+                        <h4>主な影響</h4>
+                        <ul>
+                            <li>知識系技能の基本値</li>
+                            <li>職業技能ポイント（EDU×20）</li>
+                            <li>専門知識のレベル</li>
+                            <li>社会的地位への影響</li>
+                        </ul>
+                        <h4>参考値</h4>
+                        <div class="stats-range">
+                            <span class="range-low">3-8: 無教育</span>
+                            <span class="range-normal">9-12: 高校卒</span>
+                            <span class="range-high">13-18: 大学卒以上</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="derived" class="content-section" style="display: none;">
+                <h2>派生値の詳細</h2>
+                
+                <div class="rule-card">
+                    <h3><i class="fas fa-heartbeat"></i> HP（ヒットポイント）</h3>
+                    <p>キャラクターの体力と耐久力を表す数値です。</p>
+                    <div class="derived-formula">
+                        <h4>計算式</h4>
+                        <div class="formula">
+                            <strong>HP = (CON + SIZ) ÷ 10</strong>
+                            <p>小数点以下は切り捨て</p>
+                        </div>
+                        
+                        <h4>ダメージの影響</h4>
+                        <ul>
+                            <li><strong>HPの2/3以下:</strong> 重傷、全ての技能に-10%</li>
+                            <li><strong>HPの1/3以下:</strong> 重篤、全ての技能に-25%</li>
+                            <li><strong>0以下:</strong> ノックアウト、毎ラウンドCONロール</li>
+                            <li><strong>-CON以下:</strong> 即死</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-star"></i> MP（マジックポイント）</h3>
+                    <p>魔法や特殊能力を使用するためのエネルギーです。</p>
+                    <div class="derived-formula">
+                        <h4>計算式</h4>
+                        <div class="formula">
+                            <strong>MP = POW ÷ 5</strong>
+                            <p>小数点以下は切り捨て、最低1ポイント</p>
+                        </div>
+                        
+                        <h4>使用と回復</h4>
+                        <ul>
+                            <li>魔法や特殊能力の使用で消費</li>
+                            <li>1日の休息で全快</li>
+                            <li>MPが0の状態で魔法を使うとHPを消費</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-brain"></i> SAN（正気度）</h3>
+                    <p>精神の安定度と正気を保つ力を表します。</p>
+                    <div class="derived-formula">
+                        <h4>計算式</h4>
+                        <div class="formula">
+                            <strong>SAN = POW × 5</strong>
+                        </div>
+                        
+                        <h4>正気度の喪失</h4>
+                        <ul>
+                            <li>神話生物との遭遇</li>
+                            <li>恐怖体験</li>
+                            <li>魔術的使用</li>
+                            <li>精神的ショック</li>
+                        </ul>
+                        
+                        <h4>狂気の発動</h4>
+                        <ul>
+                            <li>SANを1回で5以上失った場合</li>
+                            <li>SANが累計で半分以下になった場合</li>
+                            <li>狂気ロールに失敗した場合</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-clover"></i> 幸運</h3>
+                    <p>運命の好機や偶然の幸運を表します。</p>
+                    <div class="derived-formula">
+                        <h4>計算式</h4>
+                        <div class="formula">
+                            <strong>幸運 = POW × 5</strong>
+                        </div>
+                        
+                        <h4>幸運の使用</h4>
+                        <ul>
+                            <li>危機的状況の好転</li>
+                            <li>重要なロールの再挑戦</li>
+                            <li>偶然の発見</li>
+                        </ul>
+                        
+                        <h4>重要な特性</h4>
+                        <ul>
+                            <li>消費した幸運は回復しない</li>
+                            <li>KPの判断で使用可能</li>
+                            <li>状況によっては複数回必要</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-weight"></i> BLD（ビルド）</h3>
+                    <p>体格と体質の総合的な指標です。</p>
+                    <div class="derived-formula">
+                        <h4>計算式</h4>
+                        <div class="formula">
+                            <strong>BLD = STR + SIZ</strong>
+                            <p>から対応表で決定</p>
+                        </div>
+                        
+                        <h4>ビルド表</h4>
+                        <table class="build-table">
+                            <tr>
+                                <th>STR+SIZ</th>
+                                <th>ビルド</th>
+                                <th>特徴</th>
+                            </tr>
+                            <tr>
+                                <td>2-24</td>
+                                <td>-2</td>
+                                <td>極小</td>
+                            </tr>
+                            <tr>
+                                <td>25-49</td>
+                                <td>-1</td>
+                                <td>小柄</td>
+                            </tr>
+                            <tr>
+                                <td>50-74</td>
+                                <td>0</td>
+                                <td>平均</td>
+                            </tr>
+                            <tr>
+                                <td>75-99</td>
+                                <td>+1</td>
+                                <td>大柄</td>
+                            </tr>
+                            <tr>
+                                <td>100+</td>
+                                <td>+2</td>
+                                <td>巨大</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-running"></i> MOV（ムーブ）</h3>
+                    <p>1ラウンドに移動できる距離を表します。</p>
+                    <div class="derived-formula">
+                        <h4>計算式</h4>
+                        <div class="formula">
+                            <strong>MOV = (DEX + STR) と (DEX + SIZ) で高い方から決定</strong>
+                        </div>
+                        
+                        <h4>ムーブ表</h4>
+                        <table class="move-table">
+                            <tr>
+                                <th>合計値</th>
+                                <th>MOV</th>
+                                <th>移動距離</th>
+                            </tr>
+                            <tr>
+                                <td>2-64</td>
+                                <td>7</td>
+                                <td>7メートル/ラウンド</td>
+                            </tr>
+                            <tr>
+                                <td>65-84</td>
+                                <td>8</td>
+                                <td>8メートル/ラウンド</td>
+                            </tr>
+                            <tr>
+                                <td>85+</td>
+                                <td>9</td>
+                                <td>9メートル/ラウンド</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills-limit" class="content-section" style="display: none;">
+                <h2>技能上限の詳細</h2>
+                
+                <div class="rule-card">
+                    <h3><i class="fas fa-chart-line"></i> 技能の成長限界</h3>
+                    <p>技能の成長にはそれぞれの上限があり、これを超えることは基本的にできません。</p>
+                    
+                    <div class="limit-types">
+                        <div class="limit-type">
+                            <h4>基本上限</h4>
+                            <div class="limit-box">
+                                <p><strong>75%</strong></p>
+                                <p>どんな技能でも基本的な上限は75%</p>
+                            </div>
+                        </div>
+                        
+                        <div class="limit-type">
+                            <h4>職業技能</h4>
+                            <div class="limit-box occupational">
+                                <p><strong>90%</strong></p>
+                                <p>職業に関連する技能は90%まで上げられる</p>
+                            </div>
+                        </div>
+                        
+                        <div class="limit-type">
+                            <h4>興味本位技能</h4>
+                            <div class="limit-box interest">
+                                <p><strong>50%</strong></p>
+                                <p>興味で習得した技能は50%が上限</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-arrow-up"></i> 上限を超える成長</h3>
+                    <p>特別な状況では、上限を超えて技能を上げることができます。</p>
+                    
+                    <h4>成長の機会</h4>
+                    <ul>
+                        <li><strong>成功による成長:</strong> 技能ロールに成功した場合、成長ロールを行う</li>
+                        <li><strong>失敗からの学習:</strong> 失敗した場合でも、特別な事情があれば成長可能</li>
+                        <li><strong>研修と訓練:</strong> 十分な時間と指導者がいれば上限を超えて上昇</li>
+                        <li><strong>実践的経験:</strong> 困難な状況での成功は大きな成長につながる</li>
+                    </ul>
+                    
+                    <div class="growth-example">
+                        <h5>成長ロールの例</h5>
+                        <p>言いくるめ65%の技能でロールし、出目が45で成功。</p>
+                        <p>成長ロールで1d100を振り、66以上であれば技能が1d10上昇する。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="occupations" class="content-section" style="display: none;">
+                <h2>職業の詳細</h2>
+                
+                <div class="rule-card">
+                    <h3><i class="fas fa-briefcase"></i> 職業の選択</h3>
+                    <p>キャラクターの職業は、その人物の背景、技能、社会的地位を決定づける重要な要素です。</p>
+                    
+                    <h4>職業の決定方法</h4>
+                    <ol>
+                        <li>プレイヤーが希望する職業を選択</li>
+                        <li>KPと相談して時代背景に合う職業にする</li>
+                        <li>EDU（教育）値が職業によって制限される場合がある</li>
+                        <li>職業技能ポイント（EDU×20）を割り振る</li>
+                    </ol>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-user-tie"></i> 代表的な職業一覧</h3>
+                    
+                    <div class="occupations-grid">
+                        <div class="occupation-item">
+                            <h4>探偵</h4>
+                            <p><strong>職業技能:</strong> 言いくるめ、隠密、聞き耳、説得、心理学、図書館、写真、追跡</p>
+                            <p><strong>特徴:</strong> 調査能力に優れ、情報収集が得意</p>
+                        </div>
+                        
+                        <div class="occupation-item">
+                            <h4>医者</h4>
+                            <p><strong>職業技能:</strong> 医学、生物学、化学、心理学、薬学、言いくるめ</p>
+                            <p><strong>特徴:</strong> 医学知識と治療能力を持つ</p>
+                        </div>
+                        
+                        <div class="occupation-item">
+                            <h4>教師</h4>
+                            <p><strong>職業技能:</strong> 図書館、心理学、説得、母国語、歴史、考古学、地学</p>
+                            <p><strong>特徴:</strong> 知識が豊富で教育能力がある</p>
+                        </div>
+                        
+                        <div class="occupation-item">
+                            <h4>記者</h4>
+                            <p><strong>職業技能:</strong> 写真、図書館、言いくるめ、聞き耳、心理学、説得、母国語</p>
+                            <p><strong>特徴:</strong> 情報収集と文章能力に優れる</p>
+                        </div>
+                        
+                        <div class="occupation-item">
+                            <h4>警察官</h4>
+                            <p><strong>職業技能:</strong> 拳銃、聞き耳、説得、心理学、追跡、隠密、法律</p>
+                            <p><strong>特徴:</strong> 戦闘能力と法的知識を持つ</p>
+                        </div>
+                        
+                        <div class="occupation-item">
+                            <h4>学生</h4>
+                            <p><strong>職業技能:</strong> 図書館、母国語、歴史、化学、生物学、物理学、心理学</p>
+                            <p><strong>特徴:</strong> 学習能力が高く、知識を広く学んでいる</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-cog"></i> 職業技能の割り振り</h3>
+                    <p>職業技能ポイント（EDU×20）を以下のルールに従って割り振ります。</p>
+                    
+                    <h4>割り振りルール</h4>
+                    <ul>
+                        <li>各職業技能に最低1ポイントを割り振る</li>
+                        <li>1つの技能に全ポイントを割り振ってはいけない</li>
+                        <li>技能値の上限に注意する（通常は90%）</li>
+                        <li>キャラクターの個性を反映させる</li>
+                    </ul>
+                    
+                    <div class="allocation-example">
+                        <h5>割り振り例（EDU 15の場合）</h5>
+                        <p><strong>職業技能ポイント:</strong> 15×20=300ポイント</p>
+                        <div class="allocation-list">
+                            <span>言いくるめ: 40%</span>
+                            <span>隠密: 35%</span>
+                            <span>聞き耳: 45%</span>
+                            <span>説得: 30%</span>
+                            <span>心理学: 40%</span>
+                            <span>図書館: 45%</span>
+                            <span>写真: 35%</span>
+                            <span>追跡: 30%</span>
+                        </div>
+                        <p><strong>合計:</strong> 300ポイント</p>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-handshake"></i> 信用（クレジット）</h3>
+                    <p>信用技能はキャラクターの社会的地位、評判、経済力を表す重要な技能です。</p>
+                    
+                    <h4>信用の意味</h4>
+                    <p>信用はキャラクターの社会的な信用度、経済的な余裕、人脈の広さを示します。高い信用を持つキャラクターは以下のような特権を得られます：</p>
+                    
+                    <ul>
+                        <li><strong>社会的信頼:</strong> 人々からの信頼が厚く、情報収集が容易</li>
+                        <li><strong>経済的余裕:</strong> 高価な装備品の購入、高級な宿への滞在</li>
+                        <li><strong>人脈:</strong> 様々な分野の専門家や有力者とのつながり</li>
+                        <li><strong>権威:</strong> 公的な場での発言力、交渉力</li>
+                    </ul>
+
+                    <h4>初期値の決定</h4>
+                    <div class="formula">
+                        <strong>信用の初期値 = EDU×5</strong>
+                    </div>
+                    <p>ただし、KPの判断で職業によって調整される場合があります。例：</p>
+                    <ul>
+                        <li>裕福な家庭のキャラクター: +10～20%</li>
+                        <li>貧困のキャラクター: -10～20%</li>
+                        <li>社会的に信用される職業（医者、弁護士）: +10～30%</li>
+                    </ul>
+
+                    <h4>信用の使用例</h4>
+                    <div class="example-box">
+                        <h5>情報収集</h5>
+                        <p><strong>状況:</strong> 高級クラブで有力者から情報を得たい</p>
+                        <p><strong>ロール:</strong> 信用 vs 難易度60</p>
+                        <p><strong>成功:</strong> クラブに入ることができ、有力者と会話する機会を得る</p>
+                        <p><strong>失敗:</strong> 門前払い、または不審者として扱われる</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h5>資金調達</h5>
+                        <p><strong>状況:</strong> 調査に必要な高価な機材を購入したい</p>
+                        <p><strong>ロール:</strong> 信用 vs 難易度50</p>
+                        <p><strong>成功:</strong> 必要な資金を調達できる</p>
+                        <p><strong>失敗:</strong> 資金不足、または借金をしなければならない</p>
+                    </div>
+
+                    <h4>信用の維持と喪失</h4>
+                    <p>信用は一度失ったら、取り戻すのが非常に困難です：</p>
+                    <ul>
+                        <li><strong>犯罪行為:</strong> 信用-10～30%</li>
+                        <li><strong>詐欺行為:</strong> 信用-20～50%</li>
+                        <li><strong>社会的スキャンダル:</strong> 信用-10～40%</li>
+                        <li><strong>借金の滞納:</strong> 信用-5～20%</li>
+                    </ul>
+
+                    <h4>信用と狂気</h4>
+                    <p>SAN値が低下すると、信用にも影響が出ることがあります。精神的不安定な行動は、周囲の信頼を失う原因となります。</p>
+                </div>
+            </section>
+
+            <section id="credit" class="content-section" style="display: none;">
+                <h2>信用（クレジット）の詳細</h2>
+                
+                <div class="rule-card">
+                    <h3><i class="fas fa-coins"></i> 信用の基本</h3>
+                    <p>信用はキャラクターの社会的地位、経済力、人脈、評判を総合的に表す技能です。これは単なる金銭的な裕福さではなく、社会的な信用度を意味します。</p>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-chart-line"></i> 信用の効果</h3>
+                    <div class="credit-effects">
+                        <div class="effect-category">
+                            <h4>0-9%: 信用なし</h4>
+                            <p>ホームレス、重度の借金、犯罪者。社会的に完全に排除された状態。</p>
+                        </div>
+                        <div class="effect-category">
+                            <h4>10-24%: 低信用</h4>
+                            <p>アルバイト、日雇い、貧困層。ギャンブラー、浮浪者、生活保護。</p>
+                        </div>
+                        <div class="effect-category">
+                            <h4>25-49%: 平均的信用</h4>
+                            <p>一般労働者、事務員、店員。普通の生活レベル。</p>
+                        </div>
+                        <div class="effect-category">
+                            <h4>50-74%: 高信用</h4>
+                            <p>専門職、管理職、中小企業の経営者。中産階級の上層。</p>
+                        </div>
+                        <div class="effect-category">
+                            <h4>75-89%: 非常に高い信用</h4>
+                            <p>大企業の重役、有名医師、弁護士、政治家。社会的に尊敬される存在。</p>
+                        </div>
+                        <div class="effect-category">
+                            <h4>90%以上: 絶大な信用</h4>
+                            <p>大財産の相続者、著名な実業家、国家的な権威。非常に限られた人々。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-briefcase"></i> 職業による信用の違い</h3>
+                    <div class="occupations-grid">
+                        <div class="occupation-item">
+                            <h4>医者・弁護士・会計士</h4>
+                            <p><strong>推奨信用:</strong> 60-80%</p>
+                            <p><strong>特徴:</strong> 高度な専門知識と社会的信用を持つ</p>
+                        </div>
+                        <div class="occupation-item">
+                            <h4>警察官・軍人</h4>
+                            <p><strong>推奨信用:</strong> 40-60%</p>
+                            <p><strong>特徴:</strong> 公的な権威と安定した収入</p>
+                        </div>
+                        <div class="occupation-item">
+                            <h4>教師・図書館員</h4>
+                            <p><strong>推奨信用:</strong> 35-55%</p>
+                            <p><strong>特徴:</strong> 安定した職業だが、収入は平均的</p>
+                        </div>
+                        <div class="occupation-item">
+                            <h4>労働者・事務員</h4>
+                            <p><strong>推奨信用:</strong> 25-45%</p>
+                            <p><strong>特徴:</strong> 一般的な労働者階級</p>
+                        </div>
+                        <div class="occupation-item">
+                            <h4>無職・日雇い</h4>
+                            <p><strong>推奨信用:</strong> 5-25%</p>
+                            <p><strong>特徴:</strong> 収入が不安定、社会的地位も低い</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-exclamation-triangle"></i> 信用の喪失と回復</h3>
+                    <h4>信用を失う行動</h4>
+                    <ul>
+                        <li><strong>犯罪行為:</strong> 逮捕された場合、信用-10～30%</li>
+                        <li><strong>詐欺・ペテン:</strong> バレた場合、信用-20～50%</li>
+                        <li><strong>借金の滞納:</strong> 信用-5～20%</li>
+                        <li><strong>社会的スキャンダル:</strong> 信用-10～40%</li>
+                        <li><strong>職を失う:</strong> 信用-10～30%</li>
+                    </ul>
+
+                    <h4>信用の回復</h4>
+                    <ul>
+                        <li><strong>職に就く:</strong> 信用+5～15%</li>
+                        <li><strong>借金を返済:</strong> 信用+5～10%</li>
+                        <li><strong>社会的貢献:</strong> 信用+5～20%</li>
+                        <li><strong>時間の経過:</strong> ゆっくりと回復（月1d3%）</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 クトゥルフ神話TRPG 7版 ルールブック</p>
+            <p>このサイトはファン作成の非公式ガイドです</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <style>
+        /* このページ専用の追加スタイル */
+        .ability-details {
+            margin-top: 1rem;
+        }
+        
+        .stats-range {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .range-low { color: #e74c3c; }
+        .range-normal { color: #f39c12; }
+        .range-high { color: #27ae60; }
+        
+        .derived-formula {
+            margin-top: 1rem;
+        }
+        
+        .formula {
+            background: #e8f4f8;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #3498db;
+            margin: 1rem 0;
+        }
+        
+        .formula strong {
+            font-size: 1.2rem;
+            color: #2c3e50;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        th, td {
+            padding: 0.8rem;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        
+        th {
+            background: #34495e;
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .limit-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .limit-type h4 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .example-box {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .example-box h5 {
+            color: #e74c3c;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .example-box p {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .example-box strong {
+            color: #2c3e50;
+        }
+
+        .credit-effects {
+            display: grid;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .effect-category {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .effect-category h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .effect-category p {
+            margin: 0;
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom:after 1rem;
+        }
+        .limit-box {
+            text-align: center;
+            padding: 2rem 1rem;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid #3498db;
+        }
+        
+        .limit-box.occupational {
+            border-top-color: #27ae60;
+        }
+        
+        .limit-box.interest {
+            border-top-color: #e74c3c;
+        }
+        
+        .limit-box p:first-child {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .growth-example {
+            background: #fff3cd;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 4px solid #f39c12;
+        }
+        
+        .occupations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .occupation-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid #3498db;
+        }
+        
+        .occupation-item h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .allocation-example {
+            background: #e8f4f8;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .allocation-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .allocation-list span {
+            background: white;
+            padding: 0.5rem;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</body>
+</html>
