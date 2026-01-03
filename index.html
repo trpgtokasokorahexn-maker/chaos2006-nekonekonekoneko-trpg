@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クトゥルフ神話TRPG 7版 ルールブック</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="site-title">
+                <i class="fas fa-dice-d20"></i>
+                クトゥルフ神話TRPG 7版
+            </h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="ルールを検索..." class="search-input">
+                <button onclick="searchRules()" class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="#basic-rules" onclick="showSection('basic-rules')">基本ルール</a></li>
+                <li><a href="#character" onclick="showSection('character')">キャラクター</a></li>
+                <li><a href="#combat" onclick="showSection('combat')">戦闘</a></li>
+                <li><a href="#mythos" onclick="showSection('mythos')">神話生物</a></li>
+                <li><a href="#madness" onclick="showSection('madness')">狂気</a></li>
+                <li><a href="#skills" onclick="showSection('skills')">技能</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main">
+        <div class="container">
+            <div id="searchResults" class="search-results" style="display: none;">
+                <h2>検索結果</h2>
+                <div id="searchResultsContent"></div>
+            </div>
+
+            <section id="basic-rules" class="content-section">
+                <h2>基本ルール</h2>
+                <div class="rule-grid">
+                    <div class="rule-card">
+                        <h3><i class="fas fa-dice"></i> ダイス判定</h3>
+                        <p>成功率を百分率で表し、1d100で振って目標値以下なら成功</p>
+                        <ul>
+                            <li><strong>イクストリーム成功:</strong> 技能値の1/5以下</li>
+                            <li><strong>ハード成功:</strong> 技能値の1/2以下</li>
+                            <li><strong>通常成功:</strong> 技能値以下</li>
+                            <li><strong>失敗:</strong> 技能値を超える</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="rule-card">
+                        <h3><i class="fas fa-redo"></i> プッシュロール</h3>
+                        <p>失敗したロールをもう一度振り直すことができる</p>
+                        <ul>
+                            <li>失敗した場合、より危険な結果になる可能性がある</li>
+                            <li>KPの許可が必要</li>
+                            <li>状況が悪化する代償がある</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-card">
+                        <h3><i class="fas fa-plus-minus"></i> ボーナス・ペナルティダイス</h3>
+                        <p>状況に応じてダイスに修正を加える</p>
+                        <ul>
+                            <li><strong>ボーナスダイス:</strong> 1つ多くの10の位ダイスを振る</li>
+                            <li><strong>ペナルティダイス:</strong> 1つ多くの10の位ダイスを振り、最悪の結果を採用</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-card">
+                        <h3><i class="fas fa-clover"></i> 幸運の消費</h3>
+                        <p>幸運を消費して状況を好転させる</p>
+                        <ul>
+                            <li>幸運ロールで成功すれば、状況を好転できる</li>
+                            <li>消費した幸運は回復しない</li>
+                            <li>KPの判断による</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-card">
+                        <h3><i class="fas fa-handshake"></i> 対抗ロール</h3>
+                        <p>2人のキャラクターが互いに能力を競う場合</p>
+                        <ul>
+                            <li>両者が同時にロールを行う</li>
+                            <li>成功レベルが高い方が勝利</li>
+                            <li>同じ成功レベルなら、技能値が高い方が勝利</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="character" class="content-section" style="display: none;">
+                <h2>キャラクター作成</h2>
+                <div class="rule-grid">
+                    <div class="rule-card">
+                        <h3><i class="fas fa-user"></i> 能力値</h3>
+                        <p>キャラクターの基本能力を決定する</p>
+                        <ul>
+                            <li><strong>STR（筋力）:</strong> 物理的な力</li>
+                            <li><strong>CON（体力）:</strong> 健康と耐久力</li>
+                            <li><strong>DEX（敏捷）:</strong> 反射神経と器用さ</li>
+                            <li><strong>INT（知性）:</strong> 知力と理解力</li>
+                            <li><strong>POW（精神力）:</strong> 意志力と精神の強さ</li>
+                            <li><strong>APP（外見）:</strong> 魅力と外見</li>
+                            <li><strong>SIZ（サイズ）:</strong> 体の大きさ</li>
+                            <li><strong>EDU（教育）:</strong> 教育と知識</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-card">
+                        <h3><i class="fas fa-heart"></i> 派生値</h3>
+                        <p>能力値から計算される派生的な値</p>
+                        <ul>
+                            <li><strong>HP（ヒットポイント）:</strong> (CON+SIZ)÷10（切り捨て）</li>
+                            <li><strong>MP（マジックポイント）:</strong> POW÷5（切り捨て）</li>
+                            <li><strong>SAN（正気度）:</strong> POW×5</li>
+                            <li><strong>幸運:</strong> POW×5</li>
+                            <li><strong>ビルド（BLD）:</strong> STR+SIZから算出</li>
+                            <li><strong>ムーブ（MOV）:</strong> DEXとSTR・SIZから算出</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-card">
+                        <h3><i class="fas fa-chart-line"></i> 技能上限</h3>
+                        <p>技能の成長には上限がある</p>
+                        <ul>
+                            <li><strong>基本上限:</strong> 技能値の75%</li>
+                            <li><strong>職業技能:</strong> 技能値の90%</li>
+                            <li><strong>興味本位技能:</strong> 技能値の50%</li>
+                            <li>成長ロールで上限を超えることも可能</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="combat" class="content-section" style="display: none;">
+                <h2>戦闘ルール</h2>
+                <div class="rule-grid">
+                    <div class="rule-card">
+                        <h3><i class="fas fa-fist-raised"></i> 基本応戦</h3>
+                        <p>戦闘開始時の基本行動</p>
+                        <ul>
+                            <li>DEXの高い順に行動</li>
+                            <li>1ラウンドは6秒</li>
+                            <li>1回の行動でできることは1つ</li>
+                            <li>移動または攻撃のどちらか</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-card">
+                        <h3><i class="fas fa-crosshairs"></i> 貫通攻撃</h3>
+                        <p>装甲を貫通する攻撃</p>
+                        <ul>
+                            <li>攻撃が貫通値以上のダメージを与えた場合</li>
+                            <li>追加ダメージを与える</li>
+                            <li>防具を無視したダメージ計算</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-card">
+                        <h3><i class="fas fa-shield-alt"></i> 反撃</h3>
+                        <p>攻撃を受けた際の反撃</p>
+                        <ul>
+                            <li>攻撃を受けた場合、同じターンに反撃可能</li>
+                            <li>反撃は通常攻撃と同じ扱い</li>
+                            <li>DEXが同じ場合、同時に攻撃</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-card">
+                        <h3><i class="fas fa-bed"></i> ノックアウト</h3>
+                        <p>意識を失った状態</p>
+                        <ul>
+                            <li>HPが0以下になった場合</li>
+                            <li>毎ラウンド、CONロールを行う</li>
+                            <li>失敗すると死亡</li>
+                            <li>成功しても1d6時間意識不明</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="mythos" class="content-section" style="display: none;">
+                <h2>神話生物</h2>
+                <div class="rule-grid">
+                    <div class="rule-card">
+                        <h3><i class="fas fa-dragon"></i> 代表的な神話生物</h3>
+                        <p>クトゥルフ神話に登場する生物たち</p>
+                        <ul>
+                            <li><strong>ディープ・ワン:</strong> 人魚のような存在、人間と混血可能</li>
+                            <li><strong>ミ＝ゴ:</strong> 外宇宙から来た真菌生物</li>
+                            <li><strong>シャンブル・フロッグス:</strong> 盲目の魔術使い</li>
+                            <li><strong>ナイト・ガント:</strong> 黒い翼を持つ悪魔的存在</li>
+                            <li><strong>クトゥルフ:</strong> 偉大なる旧日支配者</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-card">
+                        <h3><i class="fas fa-brain"></i> 遭遇の影響</h3>
+                        <p>神話生物との遭遇による精神的ダメージ</p>
+                        <ul>
+                            <li>遭遇時にSANロールが必要</li>
+                            <li>失敗すると正気度ポイントを失う</li>
+                            <li>イクストリーム失敗で一時的狂気</li>
+                            <li>累積的な恐怖による精神的創傷</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="madness" class="content-section" style="display: none;">
+                <h2>狂気</h2>
+                <div class="rule-grid">
+                    <div class="rule-card">
+                        <h3><i class="fas fa-brain"></i> 狂気の発動</h3>
+                        <p>正気度を失った際の精神的影響</p>
+                        <ul>
+                            <li>SANポイントを1回で5以上失った場合</li>
+                            <li>SANポイントを累計で現在の半分以下になった場合</li>
+                            <li>狂気ロールを行う</li>
+                            <li>失敗すると一時的狂気</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-card">
+                        <h3><i class="fas fa-clock"></i> 一時的狂気</h3>
+                        <p>短期的な精神的異常</p>
+                        <ul>
+                            <li>1d10ラウンド続く</li>
+                            <li>戦闘不能になることもある</li>
+                            <li>症状は多種多様</li>
+                            <li>回復後も記憶に残る</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-card">
+                        <h3><i class="fas fa-calendar-alt"></i> 恒久的狂気</h3>
+                        <p>長期的な精神的影響</p>
+                        <ul>
+                            <li>SANポイントが0になった場合</li>
+                            <li>キャラクターが精神崩壊</li>
+                            <li>治療が必要</li>
+                            <li>回復は非常に困難</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="content-section" style="display: none;">
+                <h2>技能</h2>
+                <div class="rule-grid">
+                    <div class="rule-card">
+                        <h3><i class="fas fa-list"></i> 主要技能カテゴリ</h3>
+                        <p>技能の種類と用途</p>
+                        <ul>
+                            <li><strong>戦闘技能:</strong> キック、グラップル、拳銃、マシンガン</li>
+                            <li><strong>知識技能:</strong> 医学、化学、生物学、考古学</li>
+                            <li><strong>行動技能:</strong> 隠密、聞き耳、忍び歩き、運転</li>
+                            <li><strong>交渉技能:</strong> 説得、信用、言いくるめ、脅迫</li>
+                            <li><strong>芸術技能:</strong> 演技、美術、文筆、楽器</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-card">
+                        <h3><i class="fas fa-arrow-up"></i> 技能の成長</h3>
+                        <p>技能を上げる方法</p>
+                        <ul>
+                            <li>成功した技能ロールに対して成長ロール</li>
+                            <li>1d100を振って技能値を超えたら成長</li>
+                            <li>1d10ポイント上昇</li>
+                            <li>失敗しても成長の可能性あり</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-card">
+                        <h3><i class="fas fa-briefcase"></i> 職業技能</h3>
+                        <p>職業に関連する技能</p>
+                        <ul>
+                            <li>職業ごとに得意な技能が決まっている</li>
+                            <li>より高い初期値を持つ</li>
+                            <li>成長しやすい</li>
+                            <li>キャラクターの背景を表す</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 クトゥルフ神話TRPG 7版 ルールブック</p>
+            <p>このサイトはファン作成の非公式ガイドです</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
