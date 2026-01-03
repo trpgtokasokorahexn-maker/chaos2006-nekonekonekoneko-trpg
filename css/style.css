@@ -398,3 +398,29 @@ body {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+/* 詳細ページ遷移ボタン */
+.detail-nav {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.detail-link {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.detail-link i {
+    margin-left: 8px;
+}
+
+.detail-link:hover {
+    background: #c0392b;
+    transform: translateY(-3px);
+}
