@@ -455,3 +455,7 @@ console.log(`
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 `);
+// ★ ページ遷移用
+function goToPage(page) {
+    window.location.href = page;
+}
