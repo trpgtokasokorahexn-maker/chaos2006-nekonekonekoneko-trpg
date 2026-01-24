@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技能詳細 - クトゥルフ神話TRPG 7版</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="site-title">
+                <i class="fas fa-tools"></i>
+                技能詳細
+            </h1>
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> トップページに戻る
+            </a>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="#skill-categories" onclick="showSection('skill-categories')">技能カテゴリ</a></li>
+                <li><a href="#skill-growth" onclick="showSection('skill-growth')">技能成長</a></li>
+                <li><a href="#occupation-skills" onclick="showSection('occupation-skills')">職業技能</a></li>
+                <li><a href="#combat-skills" onclick="showSection('combat-skills')">戦闘技能</a></li>
+                <li><a href="#knowledge-skills" onclick="showSection('knowledge-skills')">知識技能</a></li>
+                <li><a href="#credit-skill" onclick="showSection('credit-skill')">信用技能</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main">
+        <div class="container">
+            <section id="skill-categories" class="content-section">
+                <h2>技能カテゴリ</h2>
+                
+                <div class="rule-card">
+                    <h3><i class="fas fa-sitemap"></i> 技能の分類</h3>
+                    <p>クトゥルフ神話TRPGの技能は、大きく5つのカテゴリに分類されます。それぞれのカテゴリは、キャラクターの異なる側面を表します。</p>
+                    
+                    <div class="skill-categories-grid">
+                        <div class="skill-category">
+                            <h4><i class="fas fa-fist-raised"></i> 戦闘技能</h4>
+                            <p>物理的な戦闘や防御に関連する技能</p>
+                            <ul>
+                                <li>回避</li>
+                                <li>キック</li>
+                                <li>組み付き</li>
+                                <li>拳銃</li>
+                                <li>ショットガン</li>
+                                <li>マシンガン</li>
+                                <li>ライフル</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4><i class="fas fa-brain"></i> 知識技能</h4>
+                            <p>学問的知識や専門的な情報に関連する技能</p>
+                            <ul>
+                                <li>医学</li>
+                                <li>生物学</li>
+                                <li>化学</li>
+                                <li>物理学</li>
+                                <li>歴史</li>
+                                <li>考古学</li>
+                                <li>天文学</li>
+                                <li>図書館</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4><i class="fas fa-running"></i> 行動技能</h4>
+                            <p>身体的な行動や隠密行動に関連する技能</p>
+                            <ul>
+                                <li>隠密</li>
+                                <li>忍び歩き</li>
+                                <li>聞き耳</li>
+                                <li>追跡</li>
+                                <li>写真</li>
+                                <li>運転</li>
+                                <li>機械修理</li>
+                                <li>電気修理</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4><i class="fas fa-comments"></i> 交渉技能</h4>
+                            <p>人間関係や交渉に関連する技能</p>
+                            <ul>
+                                <li>言いくるめ</li>
+                                <li>脅迫</li>
+                                <li>説得</li>
+                                <li>チヤホヤ</li>
+                                <li>信用</li>
+                                <li>母国語</li>
+                                <li>外国語</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4><i class="fas fa-palette"></i> 芸術技能</h4>
+                            <p>創造的な活動や美的感覚に関連する技能</p>
+                            <ul>
+                                <li>演技</li>
+                                <li>芸術</li>
+                                <li>写真</li>
+                                <li>書道</li>
+                                <li>音楽</li>
+                                <li>ダンス</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-percentage"></i> 技能値の目安</h3>
+                    <div class="skill-levels">
+                        <div class="skill-level">
+                            <span class="level-range">1-24%</span>
+                            <span class="level-desc">初心者・素人レベル</span>
+                        </div>
+                        <div class="skill-level">
+                            <span class="level-range">25-49%</span>
+                            <span class="level-desc">一般的な熟練者</span>
+                        </div>
+                        <div class="skill-level">
+                            <span class="level-range">50-74%</span>
+                            <span class="level-desc">専門家レベル</span>
+                        </div>
+                        <div class="skill-level">
+                            <span class="level-range">75-89%</span>
+                            <span class="level-desc">一流の専門家</span>
+                        </div>
+                        <div class="skill-level">
+                            <span class="level-range">90%以上</span>
+                            <span class="level-desc">世界的権威・天才</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skill-growth" class="content-section" style="display: none;">
+                <h2>技能の成長</h2>
+                
+                <div class="rule-card">
+                    <h3><i class="fas fa-seedling"></i> 技能成長の基本</h3>
+                    <p>クトゥルフ神話TRPGでは、技能を使用することで成長させることができます。このシステムは、キャラクターが経験を積むことを表現しています。</p>
+                    
+                    <div class="growth-flow">
+                        <div class="growth-step">
+                            <h4>1. 技能の使用</h4>
+                            <p>技能ロールを行い、成功または失敗する</p>
+                        </div>
+                        <div class="growth-arrow">↓</div>
+                        <div class="growth-step">
+                            <h4>2. 成長チェック</h4>
+                            <p>セッション終了時に、使用した技能について成長ロール</p>
+                        </div>
+                        <div class="growth-arrow">↓</div>
+                        <div class="growth-step">
+                            <h4>3. 成長判定</h4>
+                            <p>1d100を振り、技能値を超えたら成長成功</p>
+                        </div>
+                        <div class="growth-arrow">↓</div>
+                        <div class="growth-step">
+                            <h4>4. 技能上昇</h4>
+                            <p>1d10ポイント技能が上昇（失敗時でも1ポイント上昇の可能性あり）</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-chart-line"></i> 成長の詳細ルール</h3>
+                    
+                    <h4>成長ロールの条件</h4>
+                    <ul>
+                        <li><strong>技能を使用した:</strong> そのセッション中に技能ロールを行った</li>
+                        <li><strong>KPの判断:</strong> 状況に応じてKPが成長チェックを許可</li>
+                        <li><strong>適切な使用:</strong> 無理のない、自然な技能の使用</li>
+                    </ul>
+
+                    <h4>成長ロールの方法</h4>
+                    <div class="formula">
+                        <strong>1d100 ≤ 現在の技能値 → 成長失敗</strong><br>
+                        <strong>1d100 > 現在の技能値 → 成長成功</strong>
+                    </div>
+                    <p>成長成功時：<strong>1d10ポイント上昇</strong></p>
+                    <p>成長失敗時：<strong>1ポイント上昇（KPの判断）</strong></p>
+
+                    <div class="example-box">
+                        <h5>成長の例</h5>
+                        <p><strong>状況:</strong> 探偵の技能値が35%のキャラクターが、探偵技能で重要な証拠を発見</p>
+                        <p><strong>成長ロール:</strong> 1d100 = 72（35を超えたので成功）</p>
+                        <p><strong>結果:</strong> 探偵技能が1d10 = 7ポイント上昇、新しい技能値は42%</p>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-graduation-cap"></i> 技能上限と成長</h3>
+                    <p>技能の成長には上限がありますが、特定の条件下で上限を超えて成長できることがあります。</p>
+                    
+                    <div class="skill-limits-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>技能の種類</th>
+                                    <th>基本上限</th>
+                                    <th>特別条件下での上限</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>職業技能</td>
+                                    <td>90%</td>
+                                    <td>95%（特別な訓練あり）</td>
+                                </tr>
+                                <tr>
+                                    <td>興味本位技能</td>
+                                    <td>50%</td>
+                                    <td>75%（特別な訓練あり）</td>
+                                </tr>
+                                <tr>
+                                    <td>その他技能</td>
+                                    <td>75%</td>
+                                    <td>90%（特別な訓練あり）</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-lightbulb"></i> 成長のコツ</h3>
+                    <div class="tips-grid">
+                        <div class="tip-item">
+                            <h4>多様な技能を使用</h4>
+                            <p>同じ技能ばかり使うより、様々な技能を使うことで成長の機会が増える</p>
+                        </div>
+                        <div class="tip-item">
+                            <h4>困難な状況で使用</h4>
+                            <p>難易度の高い技能ロールに挑戦することで、より大きな成長を得られることがある</p>
+                        </div>
+                        <div class="tip-item">
+                            <h4>ロールプレイ重視</h4>
+                            <p>単に技能を使うだけでなく、状況に応じた創造的な使用方法が成長につながる</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="occupation-skills" class="content-section" style="display: none;">
+                <h2>職業技能</h2>
+                
+                <div class="rule-card">
+                    <h3><i class="fas fa-briefcase"></i> 職業技能とは</h3>
+                    <p>職業技能は、キャラクターの職業に直接関連する技能で、より高い初期値を持ち、成長しやすい特徴があります。</p>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-calculator"></i> 職業技能ポイント</h3>
+                    <div class="formula">
+                        <strong>職業技能ポイント = EDU × 20</strong>
+                    </div>
+                    <p>このポイントを、職業に関連する技能に割り振ることができます。最低5%、最高90%まで割り振ることが可能です。</p>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-user-tie"></i> 主要職業と職業技能</h3>
+                    
+                    <div class="occupations-detailed-grid">
+                        <div class="occupation-detail">
+                            <h4><i class="fas fa-search"></i> 探偵</h4>
+                            <div class="occupation-stats">
+                                <p><strong>推奨EDU:</strong> 12+</p>
+                                <p><strong>職業技能:</strong> 言いくるめ、隠密、聞き耳、説得、心理学、図書館、写真、追跡</p>
+                            </div>
+                            <div class="occupation-features">
+                                <h5>特徴</h5>
+                                <ul>
+                                    <li>情報収集能力に優れる</li>
+                                    <li>様々な状況に対応できる万能性</li>
+                                    <li>法律的な知識を持つ</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="occupation-detail">
+                            <h4><i class="fas fa-stethoscope"></i> 医者</h4>
+                            <div class="occupation-stats">
+                                <p><strong>推奨EDU:</strong> 16+</p>
+                                <p><strong>職業技能:</strong> 医学、生物学、化学、心理学、薬学、言いくるめ</p>
+                            </div>
+                            <div class="occupation-features">
+                                <h5>特徴</h5>
+                                <ul>
+                                    <li>医学的な知識と治療能力</li>
+                                    <li>科学的な分析能力</li>
+                                    <li>高い社会的信用</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="occupation-detail">
+                            <h4><i class="fas fa-graduation-cap"></i> 教師</h4>
+                            <div class="occupation-stats">
+                                <p><strong>推奨EDU:</strong> 14+</p>
+                                <p><strong>職業技能:</strong> 図書館、心理学、説得、母国語、歴史、考古学、地学</p>
+                            </div>
+                            <div class="occupation-features">
+                                <h5>特徴</h5>
+                                <ul>
+                                    <li>幅広い知識を持つ</li>
+                                    <li>教育・指導能力</li>
+                                    <li>研究能力</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="occupation-detail">
+                            <h4><i class="fas fa-newspaper"></i> 記者</h4>
+                            <div class="occupation-stats">
+                                <p><strong>推奨EDU:</strong> 12+</p>
+                                <p><strong>職業技能:</strong> 写真、図書館、言いくるめ、聞き耳、心理学、説得、母国語</p>
+                            </div>
+                            <div class="occupation-features">
+                                <h5>特徴</h5>
+                                <ul>
+                                    <li>情報収集能力</li>
+                                    <li>文章能力</li>
+                                    <li>交渉能力</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="occupation-detail">
+                            <h4><i class="fas fa-shield-alt"></i> 警察官</h4>
+                            <div class="occupation-stats">
+                                <p><strong>推奨EDU:</strong> 10+</p>
+                                <p><strong>職業技能:</strong> 拳銃、聞き耳、説得、心理学、追跡、隠密、法律</p>
+                            </div>
+                            <div class="occupation-features">
+                                <h5>特徴</h5>
+                                <ul>
+                                    <li>戦闘能力</li>
+                                    <li>法的知識</li>
+                                    <li>捜査能力</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="occupation-detail">
+                            <h4><i class="fas fa-balance-scale"></i> 弁護士</h4>
+                            <div class="occupation-stats">
+                                <p><strong>推奨EDU:</strong> 16+</p>
+                                <p><strong>職業技能:</strong> 法律、図書館、心理学、説得、言いくるめ、信用、外国語</p>
+                            </div>
+                            <div class="occupation-features">
+                                <h5>特徴</h5>
+                                <ul>
+                                    <li>高度な法的知識</li>
+                                    <li>論理的思考力</li>
+                                    <li>高い社会的地位</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-lightbulb"></i> 職業選択のコツ</h3>
+                    <div class="selection-tips">
+                        <div class="tip-card">
+                            <h4>EDU値を考慮する</h4>
+                            <p>高いEDUを持つキャラクターは、学者や専門家系の職業に向いています</p>
+                        </div>
+                        <div class="tip-card">
+                            <h4>パーティのバランス</h4>
+                            <p>他のプレイヤーのキャラクターと役割が被らないように配慮しましょう</p>
+                        </div>
+                        <div class="tip-card">
+                            <h4>シナリオに合わせる</h4>
+                            <p>KPと相談して、プレイするシナリオに合った職業を選びましょう</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="combat-skills" class="content-section" style="display: none;">
+                <h2>戦闘技能</h2>
+                
+                <div class="rule-card">
+                    <h3><i class="fas fa-sword"></i> 戦闘技能の概要</h3>
+                    <p>戦闘技能は、物理的な戦闘や防御に直接使用される技能です。これらの技能は、直接的な生存に関わる重要な技能です。</p>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-shield-alt"></i> 防御技能</h3>
+                    
+                    <div class="skill-detail-card">
+                        <h4><i class="fas fa-running"></i> 回避</h4>
+                        <div class="skill-info">
+                            <p><strong>基本値:</strong> DEX×2</p>
+                            <p><strong>効果:</strong> 攻撃を回避する、危険から逃れる</p>
+                        </div>
+                        <div class="skill-usage">
+                            <h5>使用例</h5>
+                            <ul>
+                                <li>銃弾・武器の攻撃を回避</li>
+                                <li>罠や落石を避ける</li>
+                                <li>車両からの回避</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="skill-detail-card">
+                        <h4><i class="fas fa-hand-rock"></i> 組み付き</h4>
+                        <div class="skill-info">
+                            <p><strong>基本値:</strong> STR+DEX</p>
+                            <p><strong>効果:</strong> 相手を捕らえる、拘束する</p>
+                        </div>
+                        <div class="skill-usage">
+                            <h5>使用例</h5>
+                            <ul>
+                                <li>相手を捕まえる</li>
+                                <li>武器を取り上げる</li>
+                                <li>逃げる相手を止める</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-fist-raised"></i> 近接戦闘技能</h3>
+                    
+                    <div class="skill-detail-card">
+                        <h4><i class="fas fa-shoe-prints"></i> キック</h4>
+                        <div class="skill-info">
+                            <p><strong>基本値:</strong> 25%</p>
+                            <p><strong>ダメージ:</strong> 1d6+筋力ボーナス</p>
+                            <p><strong>効果:</strong> 足での攻撃</p>
+                        </div>
+                        <div class="skill-features">
+                            <h5>特徴</h5>
+                            <ul>
+                                <li>手がふさがっている時に使用可能</li>
+                                <li>武器を持っていない時の攻撃</li>
+                                <li>相手を蹴り飛ばす</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="skill-detail-card">
+                        <h4><i class="fas fa-hammer"></i> 武器攻撃</h4>
+                        <div class="skill-info">
+                            <p><strong>基本値:</strong> 25%</p>
+                            <p><strong>効果:</strong> 近接武器での攻撃</p>
+                        </div>
+                        <div class="weapon-types">
+                            <h5>武器の種類</h5>
+                            <ul>
+                                <li><strong>斧:</strong> 1d6+2+筋力ボーナス</li>
+                                <li><strong>棍棒:</strong> 1d6+筋力ボーナス</li>
+                                <li><strong>ナイフ:</strong> 1d4+筋力ボーナス</li>
+                                <li><strong>ソード:</strong> 1d6+筋力ボーナス</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-crosshairs"></i> 遠隔攻撃技能</h3>
+                    
+                    <div class="skill-detail-card">
+                        <h4><i class="fas fa-gun"></i> 拳銃</h4>
+                        <div class="skill-info">
+                            <p><strong>基本値:</strong> 20%</p>
+                            <p><strong>効果:</strong> 拳銃での攻撃</p>
+                        </div>
+                        <div class="weapon-details">
+                            <h5>主な拳銃</h5>
+                            <ul>
+                                <li><strong>.38口径リボルバー:</strong> 1d10</li>
+                                <li><strong>9mm自動拳銃:</strong> 1d10</li>
+                                <li><strong>.45口径自動拳銃:</strong> 1d10+1</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="skill-detail-card">
+                        <h4><i class="fas fa-crosshairs"></i> ライフル</h4>
+                        <div class="skill-info">
+                            <p><strong>基本値:</strong> 25%</p>
+                            <p><strong>効果:</strong> ライフルでの攻撃</p>
+                        </div>
+                        <div class="weapon-details">
+                            <h5>主なライフル</h5>
+                            <ul>
+                                <li><strong>.22口径ライフル:</strong> 1d6</li>
+                                <li><strong>ハンティングライフル:</strong> 1d10+2</li>
+                                <li><strong>軍用ライフル:</strong> 2d6+1</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="skill-detail-card">
+                        <h4><i class="fas fa-burst"></i> ショットガン</h4>
+                        <div class="skill-info">
+                            <p><strong>基本値:</strong> 30%</p>
+                            <p><strong>効果:</strong> ショットガンでの攻撃</p>
+                        </div>
+                        <div class="weapon-details">
+                            <h5>ダメージ</h5>
+                            <p>ショットガンのダメージは距離によって変化します：</p>
+                            <ul>
+                                <li><strong>至近距離（3m以内）:</strong> 4d6</li>
+                                <li><strong>近距離（3-15m）:</strong> 2d6</li>
+                                <li><strong>中距離（15-50m）:</strong> 1d6</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="knowledge-skills" class="content-section" style="display: none;">
+                <h2>知識技能</h2>
+                
+                <div class="rule-card">
+                    <h3><i class="fas fa-book"></i> 知識技能の概要</h3>
+                    <p>知識技能は、学問的知識や専門的な情報に関連する技能です。これらの技能は、情報収集や謎解きに重要な役割を果たします。</p>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-microscope"></i> 科学技能</h3>
+                    
+                    <div class="knowledge-skill-grid">
+                        <div class="knowledge-skill-card">
+                            <h4><i class="fas fa-flask"></i> 生物学</h4>
+                            <div class="skill-basic-info">
+                                <p><strong>基本値:</strong> 1%</p>
+                                <p><strong>関連する能力:</strong> INT</p>
+                            </div>
+                            <div class="skill-description">
+                                <p>生物に関する知識。動植物の識別、生態系の理解、遺伝子の基礎知識など。</p>
+                            </div>
+                            <div class="skill-usage-examples">
+                                <h5>使用例</h5>
+                                <ul>
+                                    <li>未知の生物の識別</li>
+                                    <li>毒の有無の判断</li>
+                                    <li>生態系の分析</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="knowledge-skill-card">
+                            <h4><i class="fas fa-vial"></i> 化学</h4>
+                            <div class="skill-basic-info">
+                                <p><strong>基本値:</strong> 1%</p>
+                                <p><strong>関連する能力:</strong> INT</p>
+                            </div>
+                            <div class="skill-description">
+                                <p>化学物質に関する知識。化合物の分析、毒物の識別、薬品の調合など。</p>
+                            </div>
+                            <div class="skill-usage-examples">
+                                <h5>使用例</h5>
+                                <ul>
+                                    <li>未知の物質の分析</li>
+                                    <li>毒物の識別</li>
+                                    <li>薬品の調合</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="knowledge-skill-card">
+                            <h4><i class="fas fa-atom"></i> 物理学</h4>
+                            <div class="skill-basic-info">
+                                <p><strong>基本値:</strong> 1%</p>
+                                <p><strong>関連する能力:</strong> INT</p>
+                            </div>
+                            <div class="skill-description">
+                                <p>物理現象に関する知識。力学、電気、光学、原子物理学など。</p>
+                            </div>
+                            <div class="skill-usage-examples">
+                                <h5>使用例</h5>
+                                <ul>
+                                    <li>機械の仕組みの理解</li>
+                                    <li>電気系統の分析</li>
+                                    <li>異常な物理現象の調査</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="knowledge-skill-card">
+                            <h4><i class="fas fa-pills"></i> 薬学</h4>
+                            <div class="skill-basic-info">
+                                <p><strong>基本値:</strong> 1%</p>
+                                <p><strong>関連する能力:</strong> INT</p>
+                            </div>
+                            <div class="skill-description">
+                                <p>医薬品に関する知識。薬効、副作用、調合法、毒物学など。</p>
+                            </div>
+                            <div class="skill-usage-examples">
+                                <h5>使用例</h5>
+                                <ul>
+                                    <li>薬の効果の判断</li>
+                                    <li>毒の中和</li>
+                                    <li>薬品の調合</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-history"></i> 人文学技能</h3>
+                    
+                    <div class="knowledge-skill-grid">
+                        <div class="knowledge-skill-card">
+                            <h4><i class="fas fa-scroll"></i> 歴史</h4>
+                            <div class="skill-basic-info">
+                                <p><strong>基本値:</strong> 10%</p>
+                                <p><strong>関連する能力:</strong> INT</p>
+                            </div>
+                            <div class="skill-description">
+                                <p>歴史に関する知識。特定の時代、事件、人物についての知識。</p>
+                            </div>
+                            <div class="skill-usage-examples">
+                                <h5>使用例</h5>
+                                <ul>
+                                    <li>古い資料の年代特定</li>
+                                    <li>歴史的出来事の解釈</li>
+                                    <li>遺跡の歴史的価値の判断</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="knowledge-skill-card">
+                            <h4><i class="fas fa-monument"></i> 考古学</h4>
+                            <div class="skill-basic-info">
+                                <p><strong>基本値:</strong> 1%</p>
+                                <p><strong>関連する能力:</strong> INT</p>
+                            </div>
+                            <div class="skill-description">
+                                <p>古代文明に関する知識。遺跡の調査、遺物の分析、古代文字の解読など。</p>
+                            </div>
+                            <div class="skill-usage-examples">
+                                <h5>使用例</h5>
+                                <ul>
+                                    <li>遺跡の年代特定</li>
+                                    <li>古代の工芸品の真贋判定</li>
+                                    <li>古代文字の解読</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="knowledge-skill-card">
+                            <h4><i class="fas fa-globe"></i> 地学</h4>
+                            <div class="skill-basic-info">
+                                <p><strong>基本値:</strong> 10%</p>
+                                <p><strong>関連する能力:</strong> INT</p>
+                            </div>
+                            <div class="skill-description">
+                                <p>地球科学に関する知識。地質、地形、気象、海洋など。</p>
+                            </div>
+                            <div class="skill-usage-examples">
+                                <h5>使用例</h5>
+                                <ul>
+                                    <li>地質の調査</li>
+                                    <li>天候の予測</li>
+                                    <li>地形の分析</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="knowledge-skill-card">
+                            <h4><i class="fas fa-language"></i> 言語学</h4>
+                            <div class="skill-basic-info">
+                                <p><strong>基本値:</strong> 5%</p>
+                                <p><strong>関連する能力:</strong> INT</p>
+                            </div>
+                            <div class="skill-description">
+                                <p>言語に関する知識。未知の言語の解読、言語の系統、古代言語など。</p>
+                            </div>
+                            <div class="skill-usage-examples">
+                                <h5>使用例</h5>
+                                <ul>
+                                    <li>未知の言語の解読</li>
+                                    <li>古代文字の解釈</li>
+                                    <li>方言の理解</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-book-reader"></i> 図書館技能</h3>
+                    
+                    <div class="library-skill-detail">
+                        <h4><i class="fas fa-search"></i> 図書館</h4>
+                        <div class="skill-basic-info">
+                            <p><strong>基本値:</strong> 10%</p>
+                            <p><strong>関連する能力:</strong> INT</p>
+                        </div>
+                        <div class="skill-description">
+                            <p>図書館での情報検索能力。資料の見つけ方、目録の使い方、関連資料の発見など。</p>
+                        </div>
+                        <div class="library-usage">
+                            <h5>使用例</h5>
+                            <div class="example-scenario">
+                                <p><strong>調査シナリオ:</strong></p>
+                                <ol>
+                                    <li>図書館で古い新聞記事を探す</li>
+                                    <li>専門書籍から特定の情報を抽出</li>
+                                    <li>関連する複数の資料を統合</li>
+                                    <li>古い地図や文書の解読</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="library-modifiers">
+                            <h5>修正値の例</h5>
+                            <ul>
+                                <li><strong>良い図書館:</strong> +20%</li>
+                                <li><strong>専門図書館:</strong> +30%</li>
+                                <li><strong>資料が少ない:</strong> -20%</li>
+                                <li><strong>言語が異なる:</strong> -30%</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="credit-skill" class="content-section" style="display: none;">
+                <h2>信用技能</h2>
+                
+                <div class="rule-card">
+                    <h3><i class="fas fa-handshake"></i> 信用技能の概要</h3>
+                    <p>信用技能は、キャラクターの社会的地位、経済力、人脈、評判を総合的に表す重要な技能です。これは単なる金銭的な裕福さではなく、社会的な信用度を意味します。</p>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-chart-line"></i> 信用レベルの詳細</h3>
+                    
+                    <div class="credit-levels-detailed">
+                        <div class="credit-level-detailed">
+                            <div class="level-header">
+                                <h4>0-9%: 信用なし</h4>
+                                <span class="level-badge level-none">社会的に排除</span>
+                            </div>
+                            <div class="level-content">
+                                <p><strong>生活レベル:</strong> ホームレス、重度の借金、犯罪者</p>
+                                <p><strong>社会的扱い:</strong> 警察の注目、店の出入り禁止、宿なし</p>
+                                <p><strong>利用可能なもの:</strong> ほとんどなし、恵施や施設の利用</p>
+                                <div class="level-examples">
+                                    <h5>具体例</h5>
+                                    <ul>
+                                        <li>路上生活者</li>
+                                        <li>多重債務者</li>
+                                        <li>前科のある者</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="credit-level-detailed">
+                            <div class="level-header">
+                                <h4>10-24%: 低信用</h4>
+                                <span class="level-badge level-low">社会的底辺</span>
+                            </div>
+                            <div class="level-content">
+                                <p><strong>生活レベル:</strong> アルバイト、日雇い、貧困層</p>
+                                <p><strong>社会的扱い:</strong> 一般的な店での買い物可能、安宿利用</p>
+                                <p><strong>利用可能なもの:</strong> 安価な宿、大衆食堂、公共機関</p>
+                                <div class="level-examples">
+                                    <h5>具体例</h5>
+                                    <ul>
+                                        <li>日雇い労働者</li>
+                                        <li>アルバイト学生</li>
+                                        <li>年金生活者</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="credit-level-detailed">
+                            <div class="level-header">
+                                <h4>25-49%: 平均的信用</h4>
+                                <span class="level-badge level-average">一般市民</span>
+                            </div>
+                            <div class="level-content">
+                                <p><strong>生活レベル:</strong> 一般労働者、事務員、店員</p>
+                                <p><strong>社会的扱い:</strong> 普通の社会的扱い、銀行口座開設可能</p>
+                                <p><strong>利用可能なもの:</strong> 中級ホテル、レストラン、百貨店</p>
+                                <div class="level-examples">
+                                    <h5>具体例</h5>
+                                    <ul>
+                                        <li>会社員</li>
+                                        <li>小売店店員</li>
+                                        <li>事務職</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="credit-level-detailed">
+                            <div class="level-header">
+                                <h4>50-74%: 高信用</h4>
+                                <span class="level-badge level-high">中産階級</span>
+                            </div>
+                            <div class="level-content">
+                                <p><strong>生活レベル:</strong> 専門職、管理職、中小企業経営者</p>
+                                <p><strong>社会的扱い:</strong> 社会的に信頼され、高級施設利用可能</p>
+                                <p><strong>利用可能なもの:</strong> 高級ホテル、会員制クラブ、高級レストラン</p>
+                                <div class="level-examples">
+                                    <h5>具体例</h5>
+                                    <ul>
+                                        <li>医者</li>
+                                        <li>弁護士</li>
+                                        <li>中小企業社長</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="credit-level-detailed">
+                            <div class="level-header">
+                                <h4>75-89%: 非常に高い信用</h4>
+                                <span class="level-badge level-very-high">上流階級</span>
+                            </div>
+                            <div class="level-content">
+                                <p><strong>生活レベル:</strong> 大企業重役、有名専門家、政治家</p>
+                                <p><strong>社会的扱い:</strong> VIP扱い、専用のサービス、社会的影響力</p>
+                                <p><strong>利用可能なもの:</strong> 一流ホテル、高級クラブ、専用サービス</p>
+                                <div class="level-examples">
+                                    <h5>具体例</h5>
+                                    <ul>
+                                        <li>大企業重役</li>
+                                        <li>有名政治家</li>
+                                        <li>世界的専門家</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="credit-level-detailed">
+                            <div class="level-header">
+                                <h4>90%以上: 絶大な信用</h4>
+                                <span class="level-badge level-extreme">超上流</span>
+                            </div>
+                            <div class="level-content">
+                                <p><strong>生活レベル:</strong> 大財産相続者、著名実業家、国家的権威</p>
+                                <p><strong>社会的扱い:</strong> 最高級のVIP待遇、国家的な影響力</p>
+                                <p><strong>利用可能なもの:</strong> 最上級の施設、専用機、私設サービス</p>
+                                <div class="level-examples">
+                                    <h5>具体例</h5>
+                                    <ul>
+                                        <li>大財産家</li>
+                                        <li>王族</li>
+                                        <li>世界的権威</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-cogs"></i> 信用技能の使用方法</h3>
+                    
+                    <div class="credit-usage-examples">
+                        <div class="usage-example">
+                            <h4><i class="fas fa-info-circle"></i> 情報収集</h4>
+                            <div class="example-details">
+                                <p><strong>状況:</strong> 高級クラブで有力者から重要な情報を得たい</p>
+                                <p><strong>難易度:</strong> 50-70（相手の地位により変化）</p>
+                                <p><strong>成功:</strong> クラブに入場し、有力者と会話する機会を得る</p>
+                                <p><strong>失敗:</strong> 門前払い、または不審者として扱われる</p>
+                            </div>
+                        </div>
+
+                        <div class="usage-example">
+                            <h4><i class="fas fa-shopping-cart"></i> 物品調達</h4>
+                            <div class="example-details">
+                                <p><strong>状況:</strong> 調査に必要な高価な機材を購入したい</p>
+                                <p><strong>難易度:</strong> 40-60（物品の価値により変化）</p>
+                                <p><strong>成功:</strong> 必要な資金を調達し、機材を購入できる</p>
+                                <p><strong>失敗:</strong> 資金不足、または割高な価格で購入</p>
+                            </div>
+                        </div>
+
+                        <div class="usage-example">
+                            <h4><i class="fas fa-users"></i> 人脈利用</h4>
+                            <div class="example-details">
+                                <p><strong>状況:</strong> 特定の分野の専門家を紹介してもらいたい</p>
+                                <p><strong>難易度:</strong> 60-80（専門家のレベルにより変化）</p>
+                                <p><strong>成功:</strong> 適切な専門家を紹介してもらえる</p>
+                                <p><strong>失敗:</strong> 紹介が得られない、または不適切な人を紹介される</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-exclamation-triangle"></i> 信用の喪失と回復</h3>
+                    
+                    <div class="credit-loss-recovery">
+                        <div class="loss-section">
+                            <h4>信用を失う行動</h4>
+                            <div class="loss-examples">
+                                <div class="loss-example">
+                                    <h5>犯罪行為 (-10～30%)</h5>
+                                    <p>逮捕された場合、特に詐欺や窃盗などの経済犯罪</p>
+                                </div>
+                                <div class="loss-example">
+                                    <h5>詐欺行為 (-20～50%)</h5>
+                                    <p>ペテン、詐欺、信頼の裏切り行為</p>
+                                </div>
+                                <div class="loss-example">
+                                    <h5>社会的スキャンダル (-10～40%)</h5>
+                                    <p>不倫、汚職、社会的に不適切な行為</p>
+                                </div>
+                                <div class="loss-example">
+                                    <h5>借金の滞納 (-5～20%)</h5>
+                                    <p>ローンの返済不能、支払いの遅延</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="recovery-section">
+                            <h4>信用の回復方法</h4>
+                            <div class="recovery-examples">
+                                <div class="recovery-example">
+                                    <h5>時間の経過 (+1d3%/月)</h5>
+                                    <p>スキャンダルや事件から時間が経過することで自然に回復</p>
+                                </div>
+                                <div class="recovery-example">
+                                    <h5>社会的貢献 (+5～20%)</h5>
+                                    <p>慈善活動、地域への貢献、社会的に評価される行為</p>
+                                </div>
+                                <div class="recovery-example">
+                                    <h5>借金の返済 (+5～10%)</h5>
+                                    <p>借金を完済することで信用を回復</p>
+                                </div>
+                                <div class="recovery-example">
+                                    <h5>新たな職業 (+5～15%)</h5>
+                                    <p>安定した職業に就くことで信用を回復</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3><i class="fas fa-brain"></i> 信用と狂気の関係</h3>
+                    <p>信用と狂気（SAN値）には密接な関係があります。SAN値の低下は、キャラクターの精神的不安定を引き起こし、それが社会的な信用の喪失につながることがあります。</p>
+                    
+                    <div class="sanity-credit-relation">
+                        <h4>SAN値低下による信用への影響</h4>
+                        <ul>
+                            <li><strong>SAN 50以下:</strong> 時々異常な行動、信用-5%</li>
+                            <li><strong>SAN 25以下:</strong> 明らかな狂気の兆候、信用-10%</li>
+                            <li><strong>SAN 10以下:</strong> 重度の精神異常、信用-20%</li>
+                            <li><strong>SAN 0:</strong> 完全なる精神崩壊、信用-50%</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 クトゥルフ神話TRPG 7版 ルールブック</p>
+            <p>このサイトはファン作成の非公式ガイドです</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <style>
+        /* このページ専用の追加スタイル */
+        .skill-categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .skill-category {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .skill-category h4 {
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-category ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skill-category li {
+            padding: 0.3rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .skill-category li:last-child {
+            border-bottom: none;
+        }
+
+        .skill-levels {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin: 1rem 0;
+        }
+
+        .skill-level {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 4px solid #3498db;
+        }
+
+        .level-range {
+            font-weight: bold;
+            color: #2c3e50;
+            min-width: 80px;
+        }
+
+        .level-desc {
+            color: #666;
+            text-align: right;
+        }
+
+        .growth-flow {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .growth-step {
+            background: white;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .growth-step h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .growth-arrow {
+            font-size: 2rem;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .occupations-detailed-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .occupation-detail {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .occupation-detail h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .occupation-stats {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .occupation-stats p {
+            margin: 0.5rem 0;
+        }
+
+        .occupation-features ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .occupation-features li {
+            padding: 0.3rem 0;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .occupation-features li:before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            color: #e74c3c;
+        }
+
+        .skill-detail-card,
+        .knowledge-skill-card {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .skill-detail-card h4,
+        .knowledge-skill-card h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-basic-info {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .skill-basic-info p {
+            margin: 0.3rem 0;
+        }
+
+        .knowledge-skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .credit-levels-detailed {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .credit-level-detailed {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .level-header {
+            background: #34495e;
+            color: white;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .level-header h4 {
+            margin: 0;
+        }
+
+        .level-badge {
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .level-badge.level-none { background: #e74c3c; }
+        .level-badge.level-low { background: #f39c12; }
+        .level-badge.level-average { background: #f1c40f; color: #333; }
+        .level-badge.level-high { background: #27ae60; }
+        .level-badge.level-very-high { background: #3498db; }
+        .level-badge.level-extreme { background: #9b59b6; }
+
+        .level-content {
+            padding: 1.5rem;
+        }
+
+        .level-content p {
+            margin: 0.8rem 0;
+            line-height: 1.6;
+        }
+
+        .level-examples {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+
+        .level-examples h5 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .level-examples ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .level-examples li {
+            padding: 0.2rem 0;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .level-examples li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #e74c3c;
+        }
+
+        .credit-usage-examples {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .usage-example {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .usage-example h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .example-details p {
+            margin: 0.8rem 0;
+            line-height: 1.6;
+        }
+
+        .credit-loss-recovery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+
+        .loss-examples,
+        .recovery-examples {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .loss-example,
+        .recovery-example {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            padding: 1rem;
+        }
+
+        .loss-example h5,
+        .recovery-example h5 {
+            color: #e74c3c;
+            margin-bottom: 0.5rem;
+        }
+
+        .sanity-credit-relation {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .sanity-credit-relation h4 {
+            color: #856404;
+            margin-bottom: 1rem;
+        }
+
+        .sanity-credit-relation ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sanity-credit-relation li {
+            padding: 0.5rem 0;
+            padding-left: 1rem;
+            position: relative;
+            color: #856404;
+        }
+
+        .sanity-credit-relation li:before {
+            content: "⚠";
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 768px) {
+            .skill-categories-grid,
+            .occupations-detailed-grid,
+            .knowledge-skill-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .growth-flow {
+                flex-direction: column;
+            }
+            
+            .credit-loss-recovery {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-menu {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+            
+            .nav-menu li {
+                flex: 1;
+                min-width: 120px;
+            }
+        }
+    </style>
+</body>
+</html>
