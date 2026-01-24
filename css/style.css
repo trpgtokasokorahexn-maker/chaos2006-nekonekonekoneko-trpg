@@ -204,7 +204,7 @@ body {
     content: '▶';
     color: #e74c3c;
     position: absolute;
-    left: 0;
+    left: -18;
 }
 
 .rule-card li:last-child {
