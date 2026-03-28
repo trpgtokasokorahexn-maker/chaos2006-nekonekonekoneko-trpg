@@ -201,7 +201,7 @@ body {
 }
 
 .rule-card li::before {
-    content: '▶';
+    content: '▶ ';
     color: #e74c3c;
     position: absolute;
     left: -16;
